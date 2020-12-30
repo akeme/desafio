@@ -1,0 +1,14 @@
+{% extends 'desafio/base.html' %}
+
+{% block content %}
+    <div class="consulta">
+        {% if consulta.age < 0 or consulta.age > 120 %}
+            <div class="age">
+                {{ consulta.age }}
+            </div>
+        {% endif %}
+        <a class="btn btn-default" href="{% url 'consulta_edit' pk=consulta.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h2>{{ consulta.name }}</h2>
+        <p>{{ consuta. city|linebreaksbr }}</p>
+    </div>
+{% endblock %}

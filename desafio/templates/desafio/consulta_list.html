@@ -1,0 +1,12 @@
+{% extends 'desafio/base.html' %}
+
+
+
+{% for consulta in consultas %}
+    <div>
+        <p>published: {{ consulta.published_date }}</p>
+		<h2><a href="{% url 'more_details' pk=post.pk %}">{{ consulta.name }}</a></h2>
+        <p> {{ consulta.age}}</p>
+        <p>{{ consulta.city|linebreaksbr }}</p>
+    </div>
+{% endfor %}
